@@ -200,15 +200,6 @@
  built_sources = video-enumtypes.c
  built_headers = video-enumtypes.h
  lib_LTLIBRARIES = libgstvideo-@GST_API_VERSION@.la
-@@ -821,7 +823,7 @@
- 
- libgstvideo_@GST_API_VERSION@_la_LIBADD = $(GST_BASE_LIBS) $(GST_LIBS) $(ORC_LIBS) $(LIBM)
- libgstvideo_@GST_API_VERSION@_la_LDFLAGS = $(GST_LIB_LDFLAGS) $(GST_ALL_LDFLAGS) $(GST_LT_LDFLAGS)
--enum_headers = $(foreach h,$(glib_enum_headers),\n\#include \"$(h)\")
-+enum_headers = $(foreach h,$(glib_enum_headers),\n$(H)include \"$(h)\")
- @HAVE_INTROSPECTION_TRUE@BUILT_GIRSOURCES = GstVideo-@GST_API_VERSION@.gir
- @HAVE_INTROSPECTION_TRUE@gir_headers = $(patsubst %,$(srcdir)/%, \
- @HAVE_INTROSPECTION_TRUE@	$(libgstvideo_@GST_API_VERSION@include_HEADERS)) \
 --- a/gst-libs/gst/gl/Makefile.in
 +++ b/gst-libs/gst/gl/Makefile.in
 @@ -17,12 +17,14 @@
