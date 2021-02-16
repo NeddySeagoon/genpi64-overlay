@@ -91,7 +91,7 @@ DEPEND="${RDEPEND}
 "
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-1.16.2-make43.patch # remove when bumping and switching to Meson
+	"${FILESDIR}"/${PN}-1.16.3-make43.patch # remove when bumping and switching to Meson
 )
 
 src_prepare() {
