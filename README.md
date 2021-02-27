@@ -208,7 +208,7 @@ The overlay provides the following ebuilds:
 * **net-wireless/rpi3-bluetooth** [upstream](https://aur.archlinux.org/packages/pi-bluetooth/)
   * Provides a startup service and `udev` rule for the RPi3/4's integrated Bluetooth transceiver. Adapted from the [`pi-bluetooth`](https://aur.archlinux.org/packages/pi-bluetooth/) package from ArchLinux.
 
-* **net-wireless/rpi3-wifi-regdom** Provides a simple service to set the WiFi regulatory domain; the value set may be modified by editing the file `/etc/conf.d/rpi3-wifi-regdom`.
+* **net-wireless/rpi3-wifi-regdom** Thee package is removed: the simplest (with wpa_supplicant) way to set the WiFi regulatory domain is to add "COUNTRY=\*\*" line to the wpa_supplicant.conf in global section. No module params or other extra configs is need.
 
 * **sys-apps/openrc** [upstream](https://github.com/openrc/openrc/)
   * Provided lightly modified ebuilds for this, Gentoo's native init system, supporting the additional `swclock-fix` USE flag. This flag (set on the image) patches the startup code to attempt to overcome annoying clock-skew messages that can occur at boot (the `swclock` service is used on systems like the RPi, which has no RTC). Please see [these notes](https://gitlab.alpinelinux.org/alpine/aports/issues/8093) for some further background.
